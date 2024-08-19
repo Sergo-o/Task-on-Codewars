@@ -2,6 +2,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 
 public class Main {
     public static final String EARTHENWARE = "Earthenware";
@@ -38,6 +39,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        Table table;
         Scanner scan = new Scanner(System.in);
         while(scan.hasNext()){
             String line = scan.nextLine();
@@ -46,7 +48,9 @@ public class Main {
             }).toList();
             System.out.println(Arrays.toString(arr.toArray()));
             String[] array = new String[arr.size()];
-            System.out.println(Arrays.toString(setTable(arr.toArray(array))));
+            table = new Table(arr.toArray(array));
+            System.out.println(Arrays.toString(table.getTable()));
+            //System.out.println(Arrays.toString(setTable(arr.toArray(array))));
         }
 
     }
